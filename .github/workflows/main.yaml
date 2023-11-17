@@ -88,8 +88,8 @@ jobs:
          
       - name: Stop and remove container if running
         run: |
-         docker ps -q --filter "name=vis_mod2" | grep -q . && docker stop cnncls && docker rm -fv cnncls
-         docker ps -q --filter "name=vis_mod" | grep -q . && docker stop cnncls && docker rm -fv cnncls
+         docker ps -q --filter "name=vis_mod2" | grep -q . && docker stop vis_mod2 && docker rm -fv vis_mod2
+         docker ps -q --filter "name=vis_mod" | grep -q . && docker stop vis_mod && docker rm -fv vis_mod
        
       - name: Run Docker Image to serve users
         run: |
